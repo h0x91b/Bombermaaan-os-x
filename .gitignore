@@ -1,0 +1,40 @@
+.DS_Store
+src/Bombermaaan/.depend
+src/Bombermaaan/Bombermaaan
+src/RESGEN/ResGen
+src/RESGEN/libbombermaaan.dylib.1
+src/RESGEN/libbombermaaan.dylib.1.0.0
+
+
+
+
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
