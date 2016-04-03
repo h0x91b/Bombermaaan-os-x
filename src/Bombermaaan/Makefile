@@ -1,3 +1,4 @@
+prefix?=/usr/local
 # SDL library
 SDL_CONFIG := sdl-config
 SDL_CFLAGS := $(shell $(SDL_CONFIG) --cflags)
@@ -21,6 +22,7 @@ ifeq ($(DEBUG),1)
 endif
 RM = rm -f
 DEPENDFILE = .depend
+INSTALL = install -m 0755
 
 .PHONY: all all-before all-after clean strip clean-custom
 

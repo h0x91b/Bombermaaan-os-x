@@ -1,3 +1,4 @@
+prefix?=/usr/local
 CPP  = g++
 CC   = gcc
 HOSTCPP = g++
