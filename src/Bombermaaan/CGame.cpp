@@ -377,7 +377,12 @@ bool CGame::Create (char **pCommandLine, int pCommandLineCount)
     // check for existance
     if (stat(pgmDirectory.c_str(), &selftest) == -1 || !S_ISDIR(selftest.st_mode))
     {
-        pgmDirectory.clear(); // use current directory
+        pgmDirectory.clear();
+        pgmDirectory.append( "/usr/local/share/games/bombermaaan" );
+        if (stat(pgmDirectory.c_str(), &selftest) == -1 || !S_ISDIR(selftest.st_mode))
+        {
+            pgmDirectory.clear(); // use current directory
+        }
     }
 #endif
     if ( useAppDataFolder )

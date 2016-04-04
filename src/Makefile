@@ -37,6 +37,7 @@ SED=sed
 STRIP=strip
 
 CFLAGS = -O2
+UNAME_S := $(shell uname -s)
 
 all:
 	@for i in ${subdirs}; do \
@@ -49,6 +50,8 @@ install:
 		echo Installing in $$i ; \
 		(cd $$i; ${MAKE} install) \
 	done
+	mkdir -p $(prefix)/share/games/$(BINFILENAME)
+	cp -vR debian/usr/share/games/bombermaaan/Levels $(prefix)/share/games/$(BINFILENAME)
 
 uninstall:
 	@for i in ${subdirs}; do \
